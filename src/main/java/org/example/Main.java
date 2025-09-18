@@ -23,6 +23,7 @@ public class Main {
 
         System.out.print("\nChoose an option: ");
         choice =  scanner.nextInt();
+        scanner.nextLine();
     }
 
     public static void switchChoice(int choice) {
@@ -43,9 +44,11 @@ public class Main {
                 tasks.add(new Task("Coding in Java!"));
                 tasks.add(new Task("Learning How to be consistent with my plans!"));
                 tasks.add(new Task("Become a better ME!"));
+                System.out.print("\nEnter a Task Description: ");
+                tasks.add(new Task(scanner.nextLine()));
                 break;
             case 3:
-                System.out.println("\nUpdate A Task");
+                System.out.println("\nUpdate Task");
                 break;
             case 4:
                 System.out.println("\nDelete Task");
