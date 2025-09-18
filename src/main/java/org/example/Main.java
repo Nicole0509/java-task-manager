@@ -50,7 +50,18 @@ public class Main {
                 System.out.println("\nAdd Task");
                 System.out.print("Enter a Task Description: ");
                 String newTask = scanner.nextLine().trim();
-                tasks.add(new Task(newTask));
+                if(newTask.isEmpty()) {
+                    do{
+                        System.out.println("\nEmpty task descriptions are not allowed!");
+                        System.out.print("Please enter a valid Task Description: ");
+                        newTask = scanner.nextLine().trim();
+                    }while(newTask.isEmpty());
+
+                    tasks.add(new Task(newTask));
+
+                } else{
+                    tasks.add(new Task(newTask));
+                }
                 break;
             case 3:
                 System.out.println("\nUpdate Task");
