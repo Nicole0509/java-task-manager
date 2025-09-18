@@ -9,6 +9,14 @@ public class Main {
 
         ArrayList<String> Tasks = new ArrayList<String>();
 
+        Tasks.add("Do homework");
+
+        int i = 0;
+
+        for(String task : Tasks){
+            ++i;
+            System.out.println("Task number " + i +": " + task);
+        }
 
     }
 }
