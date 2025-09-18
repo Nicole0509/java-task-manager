@@ -10,6 +10,8 @@ public class Main {
         ArrayList<String> Tasks = new ArrayList<String>();
 
         Tasks.add("Do homework");
+        Tasks.add("Clean my room");
+        Tasks.add("Cook dinner");
 
         int i = 0;
 
