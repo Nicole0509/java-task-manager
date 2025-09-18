@@ -22,7 +22,14 @@ public class Main {
         System.out.println("5. Exit");
 
         System.out.print("\nChoose an option: ");
-        choice =  scanner.nextInt();
+
+        try{
+            choice =  scanner.nextInt();
+        } catch(Exception e){
+            System.out.println("Invalid Input");
+            System.out.println("Please enter a2 valid option");
+        }
+
         scanner.nextLine();
     }
 
@@ -42,7 +49,8 @@ public class Main {
             case 2:
                 System.out.println("\nAdd Task");
                 System.out.print("Enter a Task Description: ");
-                tasks.add(new Task(scanner.nextLine().trim()));
+                String newTask = scanner.nextLine().trim();
+                tasks.add(new Task(newTask));
                 break;
             case 3:
                 System.out.println("\nUpdate Task");
