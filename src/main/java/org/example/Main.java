@@ -1,8 +1,13 @@
 package org.example;
 
+import task.Task;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+
+    static ArrayList<Task> tasks = new ArrayList<Task>();
 
     public static int choice;
 
@@ -27,6 +32,9 @@ public class Main {
                 break;
             case 2:
                 System.out.println("Add Task");
+                tasks.add(new Task("Coding in Java!"));
+                tasks.add(new Task("Learning How to be consistent with my plans!"));
+                tasks.add(new Task("Become a better ME!"));
                 break;
             case 3:
                 System.out.println("Update Task");
