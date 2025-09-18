@@ -41,11 +41,8 @@ public class Main {
                 break;
             case 2:
                 System.out.println("\nAdd Task");
-                tasks.add(new Task("Coding in Java!"));
-                tasks.add(new Task("Learning How to be consistent with my plans!"));
-                tasks.add(new Task("Become a better ME!"));
-                System.out.print("\nEnter a Task Description: ");
-                tasks.add(new Task(scanner.nextLine()));
+                System.out.print("Enter a Task Description: ");
+                tasks.add(new Task(scanner.nextLine().trim()));
                 break;
             case 3:
                 System.out.println("\nUpdate Task");
