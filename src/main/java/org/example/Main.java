@@ -14,6 +14,10 @@ public class Main {
 
         Tasks.add(new Task("Learning java!"));
         Tasks.add(new Task("Learning SSH!"));
+        Tasks.add(new Task("Learning React Js!"));
 
+        for(Task task : Tasks){
+            System.out.println(task);
+        }
     }
 }
