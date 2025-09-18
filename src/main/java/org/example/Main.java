@@ -28,26 +28,34 @@ public class Main {
     public static void switchChoice(int choice) {
         switch (choice) {
             case 1:
-                System.out.println("View Tasks");
+                if(tasks.isEmpty()) {
+                    System.out.println("\nNo Tasks Found");
+                } else{
+                    System.out.println("\nView All Tasks");
+
+                    for (Task task : tasks) {
+                        System.out.println(task);
+                    }
+                }
                 break;
             case 2:
-                System.out.println("Add Task");
+                System.out.println("\nAdd Task");
                 tasks.add(new Task("Coding in Java!"));
                 tasks.add(new Task("Learning How to be consistent with my plans!"));
                 tasks.add(new Task("Become a better ME!"));
                 break;
             case 3:
-                System.out.println("Update Task");
+                System.out.println("\nUpdate A Task");
                 break;
             case 4:
-                System.out.println("Delete Task");
+                System.out.println("\nDelete Task");
                 break;
             case 5:
-                System.out.println("Exit");
+                System.out.println("\nExit");
                 System.out.println("Your Task Manager Says \"Bye\"");
                 break;
             default:
-                System.out.println("Invalid choice");
+                System.out.println("\nInvalid choice");
                 break;
         }
         System.out.println();

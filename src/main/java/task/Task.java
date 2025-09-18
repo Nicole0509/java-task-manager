@@ -7,7 +7,7 @@ public class Task {
     //Entering a new description
     public Task(String taskDescription) {
         this.description = taskDescription;
-        System.out.println("Task Description: " + taskDescription);
+        System.out.println("Added Task Description: " + taskDescription);
     }
 
     //Getting the existing tasks
