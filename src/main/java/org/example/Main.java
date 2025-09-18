@@ -4,12 +4,11 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static int choice;
 
-        Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to your task manager\n");
-
+    public static void displayMenu() {
         System.out.println("What do you want to do next?");
         System.out.println("1. View Tasks");
         System.out.println("2. Add Task");
@@ -18,8 +17,10 @@ public class Main {
         System.out.println("5. Exit");
 
         System.out.print("\nChoose an option: ");
-        int choice =  scanner.nextInt();
+        choice =  scanner.nextInt();
+    }
 
+    public static void switchChoice(int choice) {
         switch (choice) {
             case 1:
                 System.out.println("View Tasks");
@@ -35,10 +36,23 @@ public class Main {
                 break;
             case 5:
                 System.out.println("Exit");
+                System.out.println("Your Task Manager Says \"Bye\"");
                 break;
             default:
                 System.out.println("Invalid choice");
                 break;
         }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("Welcome to your task manager\n");
+
+        do{
+            displayMenu();
+            switchChoice(choice);
+
+        }while(choice != 5);
     }
 }
